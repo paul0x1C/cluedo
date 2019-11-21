@@ -189,7 +189,7 @@ def set_does_not_have_item(player, item):
             maybe.remove(item)
             if len(maybe) < 2:
                 i = maybe[0]
-                print("This resolves a maybe for %s about item %s, we now know that s*he has it." % (player,i))
+                print("This resolves a maybe for %s about item %s, we now know that they have it." % (player,i))
                 del_list.append((player,i))
                 set_has_item(player,i)
     handle_maybe_del_list(del_list)
@@ -299,7 +299,7 @@ def check_cards(): #called every round, to make decisions based on the known dis
                     in_all_maybes = False
             if in_all_maybes:
                 set_has_item(player, card)
-                print(player, "only misses", card, "and it is in all maybes, so s*he must have it")
+                print(player, "only misses", card, "and it is in all maybes, so they must have it")
                 check_cards
 if len(sys.argv) > 1:
     if sys.argv[1] == "auto":
